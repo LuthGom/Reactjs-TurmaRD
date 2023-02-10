@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 
+//  dêem uma olhada no exemplo do readme
 export default function Create() {
     // O método post é um pouco mais longo, mas vamos por partes;
 
