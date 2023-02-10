@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 
 //  dêem uma olhada no exemplo do readme
+// o state values está em um console.log. Quando forem utilizar no navegador, inspecionem para ver o resultado quando forem digitar nos inputs.
 export default function Create() {
     // O método post é um pouco mais longo, mas vamos por partes;
 
@@ -17,7 +18,7 @@ export default function Create() {
 
 //   da mesma maneira que fizemos no método patch, criamos um state que fica responsável por guardar os valores em forma de objeto. Reparem em qual é o valor inicial dele, para entendermos a estrutura que a API espera.
   const [values, setValues] = useState(valoresIniciais);
-
+  console.log(values);
 
 //   Apesar de não termos visto uma function isolada onChange, percebam que eu estou abstraindo o mesmo que fizemos no onInput lá no componente update. Porém, como agora estamos trabalhando com mais de um input, a ideia foi criar uma function reaproveitável para cada input utilizado nesse componente para realizarmos o post.
 
