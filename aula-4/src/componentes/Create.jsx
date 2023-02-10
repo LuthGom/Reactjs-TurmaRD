@@ -29,6 +29,16 @@ export default function Create() {
 
 // dessa maneira, conforme o usuário digitar no meu input, vai sendo gerado o objeto que comentamos logo acima, da seguinte forma: {titulo: valor digitado no input}
 
+// Além disso, o que estamos fazendo com o {...values}. Lembram do spread? eu utilizo para espalhar valores dentro um array ou objeto. 
+//  eu to passando o próprio state dentro do seu setValues, porque assim, a cada novo atributo adicionado, eu vou ter: o que values já possuía + o que está sendo adicionado agora.
+
+// Exemplo: se até o momento o values, possui o titulo preenchido, assim:
+
+// {titulo "laranja"}, quando eu adicionar descricao, ele vai passar a ser: {titulo: "laranja", descricao: "pokan"}
+ 
+// e assim, sucetivamente, até que eu pare de preencher os inputs e tenha meu objeto completamente preenchido:
+
+// {titulo: "laranja", descricao:"pokan", "preco": 10, url_image": "image"}
 
   const onChangeInput = (evento) => {
     setValues({ ...values, [evento.target.name]: evento.target.value });
