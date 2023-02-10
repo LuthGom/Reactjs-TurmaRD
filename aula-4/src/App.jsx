@@ -1,25 +1,16 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import "./App.css";
-import axios from "axios";
-function App() {
-  const [value, setValue] = useState({titulo: ""});
-  console.log(value);
-  function putApi() {
-    axios
-      .patch("https://api-de-compras.onrender.com/produto/masculino/21",
-     value)
-      .then((resposta) => console.log(resposta.data))
-      .catch((erro) => console.log(erro));
-  }
+import Create from "./componentes/Create";
+import Delete from "./componentes/Delete";
+import Read from "./componentes/Read";
+import Update from "./componentes/Update";
 
+function App() {
   return (
     <div className="App">
-      <button onClick={()=> putApi()}>Atualizar</button>
-      <input
-        type="text"
-        onInput={(e) => setValue({ titulo: e.target.value })}
-      />
+      {/* <Read />
+      <Update /> */}
+      {/* <Create /> */}
+      <Delete />
     </div>
   );
 }
